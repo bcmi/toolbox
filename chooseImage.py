@@ -46,7 +46,7 @@ if __name__ == '__main__':
     image_list = [str(i)+'.jpg' for i in range(1,953)]
 
     anno_file  = os.path.join(image_root, '..', 'annotations.json')
-    previous_done = 856
+    previous_done = 0 # jobs previous done without this script
     index = previous_done
     if os.path.exists(anno_file):
         labels = json.load(open(anno_file, 'r'))
