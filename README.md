@@ -16,6 +16,6 @@
 
 注意事项：
 1. 按键不要太快，否则程序容易崩溃，特别是在windows上。
-1. 如果是远程服务器+ssh运行，参考https://blog.csdn.net/qq_28888837/article/details/102865139进行配置。推荐ssh使用MobaXterm.
+1. 如果是远程服务器+ssh运行，参考https://blog.csdn.net/qq_28888837/article/details/102865139 进行配置。推荐ssh使用MobaXterm.
 2. 如果运行程序发现显示的图片很小，建议关闭程序多试两次。
 3. 标注过程命令窗口会打印信息，不过可以忽略。如果按键没反应，可能是图片窗口没在最前。
