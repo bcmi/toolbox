@@ -10,6 +10,15 @@ def GetScreenParam():
     root = tk.Tk()
     return root.winfo_screenwidth(), root.winfo_screenheight()
 
+def getImageList(image_root): # get image list. modify this to fit your data
+    #image_list = [f for f in os.listdir(image_root) if f.endswith('.jpg')]
+    beg = 1
+    ed = 952
+    image_list = [str(i)+'.jpg' for i in range(beg,ed+1)]
+    return image_list
+
+previous_done = 0 # jobs previous done without this script
+
 sysstr = platform.system()
 if(sysstr =="Windows"):
     print ("Windows")
@@ -43,10 +52,11 @@ if __name__ == '__main__':
         image_root = './best_crop_comparison'
     assert os.path.exists(image_root), image_root
     #image_list = [f for f in os.listdir(image_root) if f.endswith('.jpg')]
-    image_list = [str(i)+'.jpg' for i in range(1,953)]
+    #image_list = [str(i)+'.jpg' for i in range(1,953)]
+    image_list = getImageList(image_root)
 
     anno_file  = os.path.join(image_root, '..', 'annotations.json')
-    previous_done = 0 # jobs previous done without this script
+    
     index = previous_done
     if os.path.exists(anno_file):
         labels = json.load(open(anno_file, 'r'))
