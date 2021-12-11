@@ -97,7 +97,7 @@ if __name__ == '__main__':
             with open(anno_file, 'w') as f:
                 json.dump(labels, f)
                 print('Save annotations to ', anno_file)
-                previous_done = index
+                # previous_done = index
             key_num = cv2.waitKey(0)
 
         if key_num in [ord('q'), ESC]:
